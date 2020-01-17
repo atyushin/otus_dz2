@@ -19,8 +19,8 @@ version.h
 
 add_executable(ipFilter ${SOURCES} ${HEADERS})
 
-set_target_properties(
-ipFilter PROPERTIES
+set_target_properties( ipFilter PROPERTIES 
+CXX_STANDART 11
 CXX_STANDART 14)
 
 

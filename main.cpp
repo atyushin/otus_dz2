@@ -32,7 +32,7 @@ ipVector getIpAddressList()
         ipAddress address;
 
 
-        while(std::getline(inputLine,line,'\.'))
+        while(std::getline(inputLine,line,'.'))
         {
 
             address[oktet] = std::stoi(line);
