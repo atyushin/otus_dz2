@@ -4,7 +4,7 @@ project(ipFilter VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 configure_file(
 version.h.in
-${CMAKE_CURRENT_SOURCE_DIR}/version.h
+${CMAKE_CURRE/version.h
 )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/ip_filter-12995-758870.tsv ${CMAKE_CURRENT_BINARY_DIR}/ip_filter-12995-758870.tsv COPYONLY)
@@ -19,10 +19,11 @@ version.h
 
 add_executable(ipFilter ${SOURCES} ${HEADERS})
 
-set_target_properties( ipFilter PROPERTIES 
-CXX_STANDART 11
-CXX_STANDART 14)
+#set_target_properties( ipFilter PROPERTIES 
+#CXX_STANDART 11
+#CXX_STANDART 14)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -std=c++14")
 
 install(TARGETS ipFilter RUNTIME DESTINATION bin)
 
