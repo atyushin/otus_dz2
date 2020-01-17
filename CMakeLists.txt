@@ -4,7 +4,7 @@ project(ipFilter VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 configure_file(
 version.h.in
-${CMAKE_CURRE/version.h
+${CMAKE_CURRENT_SOURCE_DIR}/version.h
 )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/ip_filter-12995-758870.tsv ${CMAKE_CURRENT_BINARY_DIR}/ip_filter-12995-758870.tsv COPYONLY)
