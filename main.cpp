@@ -72,7 +72,7 @@ int main()
         ipVector sv  = std::move (getIpAddressList());
 
         // отсортируем ip-адреса по убыванию
-        std::sort(sv.begin(),sv.end(), [] (ipAddress addressA,ipAddress addressB)
+        std::sort(sv.begin(),sv.end(), [] (ipAddress& addressA,ipAddress& addressB)
         {
 
             return (addressA[0]>addressB[0]) ||
